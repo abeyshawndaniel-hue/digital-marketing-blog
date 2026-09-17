@@ -62,6 +62,24 @@ blockquote { margin: 22px 0 0; border-left: 2px solid var(--sun); padding-left: 
 .audience-box h3 { margin: 0; font-size: 1.7rem; }
 .takeaway { margin-top: 28px; padding: 27px 28px; background: var(--sun); color: #19241e; }
 .takeaway p { margin: 11px 0 0; max-width: 550px; font-family: "Playfair Display", Georgia, serif; font-size: 1.52rem; line-height: 1.25; }
+.ai-post { max-width: 1320px; margin: 0 auto; background: #eee5d0; color: #222721; display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); }
+.ai-post__intro { position: relative; padding: 61px clamp(26px, 5.1vw, 74px); background: #dd6e45; overflow: hidden; }
+.ai-post__intro::after { content: "AI"; position: absolute; right: -25px; bottom: -45px; font: 700 15rem/.8 "DM Sans", sans-serif; letter-spacing: -.11em; color: rgba(255,255,255,.15); }
+.ai-post__intro .post-meta { margin-bottom: 93px; }
+.ai-post__intro .eyebrow { position: relative; z-index: 1; color: #fff4dc; }
+.ai-post__intro h2 { position: relative; z-index: 1; margin: 0 0 24px; font-size: clamp(3.1rem, 5vw, 5.3rem); letter-spacing: -.065em; line-height: .91; }
+.ai-post__intro h2 em { font-family: "Playfair Display", Georgia, serif; }
+.ai-post__summary { position: relative; z-index: 1; max-width: 300px; margin: 0; font-size: 1.05rem; line-height: 1.5; }
+.ai-visual { position: relative; z-index: 1; margin: 30px 0 0; overflow: hidden; }
+.ai-visual img { display: block; width: 100%; }
+.ai-visual--hero { border: 1px solid rgba(34,39,33,.35); box-shadow: 10px 10px 0 rgba(34,39,33,.22); }
+.ai-post__body { padding: 61px clamp(26px, 5.1vw, 74px); }
+.ai-post__body h3 { margin: 0; padding: 25px 0 11px; border-top: 1px solid rgba(34,39,33,.23); font-size: 1.42rem; letter-spacing: -.035em; }
+.ai-post__body h3:first-child { padding-top: 0; border-top: 0; }
+.ai-post__body p { max-width: 690px; margin: 0 0 17px; font-size: 1rem; line-height: 1.68; }
+.ai-post__body .ai-visual { max-width: 600px; margin: 2px 0 20px; border: 1px solid rgba(34,39,33,.2); background: #fff; }
+.ai-visual--comparison img { max-height: 355px; object-fit: contain; object-position: center; }
+.ai-visual--privacy img { max-height: 330px; object-fit: cover; object-position: center; }
 .sources { max-width: 1320px; margin: auto; padding: 74px 9%; border-bottom: 1px solid var(--line); }
 .sources h2 { font-size: clamp(2.2rem, 4vw, 4rem); margin-bottom: 28px; }
 .sources ol { max-width: 760px; margin: 0; padding-left: 21px; }
@@ -80,11 +98,12 @@ body.dark .note { color: #334e22; }
   nav { gap: 15px; } nav a { font-size: .68rem; }
   .hero { min-height: 460px; padding: 80px 8% 52px; }
   .post-grid { grid-template-columns: 1fr; }
+  .ai-post { grid-template-columns: 1fr; }
   .post-meta { margin-bottom: 68px; }
   .ramsey-mark, .number { top: 112px; }
 }
 @media (max-width: 500px) {
-  nav a:nth-child(3) { display: none; }
+  nav a:nth-child(3), nav a:nth-child(4) { display: none; }
   .hero { min-height: 425px; }
   .profile-notes > div, .audience-box { grid-template-columns: 1fr; gap: 6px; }
   .ramsay-portrait { float: none; width: 100%; margin: 0 0 26px; }
