@@ -80,6 +80,38 @@ blockquote { margin: 22px 0 0; border-left: 2px solid var(--sun); padding-left: 
 .ai-post__body .ai-visual { max-width: 600px; margin: 2px 0 20px; border: 1px solid rgba(34,39,33,.2); background: #fff; }
 .ai-visual--comparison img { max-height: 355px; object-fit: contain; object-position: center; }
 .ai-visual--privacy img { max-height: 330px; object-fit: cover; object-position: center; }
+.blog-three-link { max-width: 1320px; margin: 0 auto; padding: 54px clamp(26px, 9%, 118px); display: grid; grid-template-columns: minmax(270px, .9fr) minmax(0, 1.1fr); gap: clamp(30px, 6vw, 94px); align-items: center; background: #d6ef61; color: #173824; }
+.blog-three-link__image { display: block; position: relative; overflow: hidden; box-shadow: 11px 11px 0 rgba(23,56,36,.23); }
+.blog-three-link__image img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; transition: transform .35s ease; }
+.blog-three-link__image:hover img { transform: scale(1.04); }
+.blog-three-link__image span { position: absolute; right: 13px; bottom: 13px; padding: 9px 11px; background: #173824; color: #f5f2ea; font: 500 .65rem "DM Mono", monospace; letter-spacing: .04em; }
+.blog-three-link h2 { margin-bottom: 17px; font-size: clamp(2.4rem, 4vw, 4.4rem); line-height: .93; }
+.blog-three-link > div > p:not(.eyebrow) { max-width: 490px; margin-bottom: 25px; font-size: 1.03rem; line-height: 1.58; }
+.blog-three-link__cta { display: inline-flex; gap: 12px; border-bottom: 1px solid currentColor; padding-bottom: 6px; font: 500 .72rem "DM Mono", monospace; text-decoration: none; }
+.woolworths-post { max-width: 1320px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, .75fr) minmax(0, 1.25fr); background: #123d2c; color: #f6f4e9; }
+.woolworths-post__intro { padding: 61px clamp(26px, 5.1vw, 74px); position: relative; overflow: hidden; background: #0d7b45; }
+.woolworths-post__intro::after { content: "AI"; position: absolute; right: -24px; bottom: -40px; color: rgba(217,239,119,.18); font: 700 14rem/.8 "DM Sans", sans-serif; letter-spacing: -.11em; }
+.woolworths-post__intro .post-meta { position: relative; z-index: 1; margin-bottom: 93px; }
+.woolworths-post__intro .eyebrow { position: relative; z-index: 1; color: #d9ef77; }
+.woolworths-post__intro h2 { position: relative; z-index: 1; margin-bottom: 24px; font-size: clamp(3.1rem, 5vw, 5.3rem); line-height: .91; }
+.woolworths-post__intro h2 em { font-family: "Playfair Display", Georgia, serif; }
+.woolworths-post__intro > p:last-child { position: relative; z-index: 1; max-width: 330px; margin-bottom: 0; font-size: 1.05rem; line-height: 1.55; }
+.woolworths-post__body { padding: 61px clamp(26px, 5.1vw, 74px); }
+.woolworths-post__figure { margin: 0 0 40px; border: 1px solid rgba(245,242,234,.28); background: #0d7b45; }
+.woolworths-post__figure img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.woolworths-post__figure figcaption { padding: 9px 12px; color: #d9ef77; font: .59rem "DM Mono", monospace; }
+.video-embed { max-width: 690px; margin: 0 0 36px; padding: 25px; background: rgba(217,239,119,.1); border: 1px solid rgba(217,239,119,.36); }
+.video-embed .eyebrow { margin-bottom: 10px; color: #d9ef77; }
+.video-embed h3 { padding: 0; margin-bottom: 17px; border-top: 0; }
+.video-embed__frame { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #0a2118; }
+.video-embed__frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-embed > a { display: inline-block; margin-top: 14px; font: 500 .69rem "DM Mono", monospace; }
+.woolworths-post__body h3 { margin: 0; padding: 25px 0 11px; border-top: 1px solid rgba(245,242,234,.22); font-size: 1.42rem; letter-spacing: -.035em; }
+.woolworths-post__body p { max-width: 690px; margin: 0 0 17px; font-size: 1rem; line-height: 1.68; color: #e3eee5; }
+.woolworths-post__body a { color: #d9ef77; }
+.woolworths-post__takeaway { margin-top: 33px; padding: 27px 28px; background: #d6ef61; color: #173824; }
+.woolworths-post__takeaway span { font: 500 .62rem "DM Mono", monospace; letter-spacing: .04em; }
+.woolworths-post__takeaway p { margin: 11px 0 0; color: inherit; font-family: "Playfair Display", Georgia, serif; font-size: 1.46rem; line-height: 1.3; }
 .sources { max-width: 1320px; margin: auto; padding: 74px 9%; border-bottom: 1px solid var(--line); }
 .sources h2 { font-size: clamp(2.2rem, 4vw, 4rem); margin-bottom: 28px; }
 .sources ol { max-width: 760px; margin: 0; padding-left: 21px; }
@@ -99,6 +131,7 @@ body.dark .note { color: #334e22; }
   .hero { min-height: 460px; padding: 80px 8% 52px; }
   .post-grid { grid-template-columns: 1fr; }
   .ai-post { grid-template-columns: 1fr; }
+  .blog-three-link, .woolworths-post { grid-template-columns: 1fr; }
   .post-meta { margin-bottom: 68px; }
   .ramsey-mark, .number { top: 112px; }
 }
